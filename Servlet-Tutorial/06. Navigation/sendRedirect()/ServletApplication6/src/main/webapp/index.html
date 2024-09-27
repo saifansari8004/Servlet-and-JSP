@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-container {
+            text-align: center;
+            width: 50%;
+        }
+
+        .search-container input[type="text"] {
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .search-container input[type="submit"] {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-container input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <h1>Search Here</h1>
+        <form action="searchServlet" method="post">
+            <input type="text" name="search" placeholder="Enter your search query" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+</body>
+</html>
