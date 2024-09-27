@@ -179,3 +179,56 @@ Servlet and JSP Tutorial
                      →  POST request cannot be cached
                      →  POST method cannot be bookmarked
 
+# sendRedirect() and RequestDispatcher :
+# sendRedirect(): 
+      * sendRedirect() method is used to redirect the response to another resource (ie. to servlet or JSP or html etc)
+      * It is the method of HttpServletResponse.
+      * Example : → response.sendRedirect("login.html");
+
+
+# RequestDispatcher : 
+      * The RequestDispatcher interface is used to dispatch the request to another resource (servlet or jsp or HTML within same application)
+      * It is called by res.getRequestDispatcher().
+      * Example: → RequestDispatcher dispatcher = request.getRequestDispatcher("JSPprofile.jsp");
+                 → dispatcher.forward(request, response);
+
+      * Difference between sendRedirect() and RequestDispatcher :-
+            * sendRedirect()
+                  → It is used for external request redirection.
+                  → It redirects the request to a different application or URL.
+                  → It is called by HttpServletResponse object.
+                  → Syntax:-
+                        → For any URL: response.sendRedirect("https://www.example.com");
+                        → For any servlet : response.sendRedirect("/servlet2");
+                  → It change the URL on the browser.
+
+            * RequestDispatcher
+                  → It is used for internal request redirection.
+                  → It forwards or includes the request to the same application or URL.
+                  → It has 2 methods, forward() and include().
+                  → Syntax :-
+                        → forward() method:
+                              → rd.forward(request, response);
+                        → include() method:
+                              → rd.include(request, response);
+                  → It does not change the URL on the browser.
+
+# Http Session :
+
+      * HttpSession: Used to track user sessions across multiple requests in a web application.
+      * Session management: Stores user-specific data like login info, preferences, and state across interactions.
+      * Unique ID: Each session is assigned a unique session ID to identify user data.
+      * Creation and destruction: A session is created when a user first accesses the application and can be destroyed manually or by timeout.
+
+      * Steps:
+            * Create session: creates a new session or retrieves an existing one.
+                  → HttpSession session=req.getSession();
+            * Set attribute: stores the nameString object with the key "name_key" in the session.
+                  → session.setAttribute("name_key", nameString);
+            * Get attribute: retrieves the object associated with "name_key" and casts it to a String.
+                  → String nameString = (String)session.getAttribute("name_key");
+            * Remove attribute: removes the attribute associated with "name_key" from the session.
+                  → session.removeAttribute("name_key");
+            * Invalidate session: terminates the session, invalidating all stored attributes and data.
+                  → session.invalidate();
+
