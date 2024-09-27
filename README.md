@@ -80,4 +80,43 @@ Servlet and JSP Tutorial
             - Before the servlet is removed from memory, the destroy() method is called to clean up resources.
         * Note :When multiple request occurs, each request has its new own thread i.e(MultiThreading)
 
+# Deployment Descriptor (web.xml) :
+
+      * The Deployment Descriptor (web.xml) is an XML file used to configure servlets in a web application.
+      * It is located in the WEB-INF directory of the web app and defines settings like servlet mappings, initialization parameters, and other configurations.
+      * Key elements:
+            <servlet>: Defines a servlet by name and class.
+            <servlet-mapping>: Maps a servlet to a URL pattern.
+            <welcome-file-list>: Specifies default files (e.g., index.html) to be loaded when    accessing the root of the application.
+      * Example : 
+           * <display-name>ServletApplication2</display-name>
+            	<servlet-mapping>
+            		<servlet-name>servletname</servlet-name>
+            		<url-pattern>/abcurl</url-pattern>
+            	</servlet-mapping>
+            	<servlet>
+            		<servlet-name>servletname</servlet-name>
+            		<servlet-class>in.backend.MyServlet</servlet-class>
+            	</servlet>
+      
+      * Different tasks of web.xml file :-
+            1. Servlet Configuration
+            2. JSP File Configuration
+            3. Filters Configurations
+            4. Listeners Configurations
+            5. Error Page Configuration
+            6. Welcome File Configuration
+      
+      * Note : In latest version, it is not necessary to create web.xml file. 
+      * Hint - @WebServlet Annotation
+
+
+# @WebServlet Annotation :
+      * Defines servlet: The @WebServlet annotation simplifies servlet definition without needing web.xml.
+      * URL mapping: It allows URL patterns to be mapped directly in the code.
+      * Syntax: @WebServlet(“/url”)
+      
+      * Note: Annotations i.e. @WebServlet, @WebFilter, @WebListener, @MultipartConfig etc are part of the Java Servlet API and can be used in any version from servlet 3.0 onwards, including newer versions like 3.1, 4.0, and 5.0
+
+
 
