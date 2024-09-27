@@ -192,7 +192,7 @@ Servlet and JSP Tutorial
       * Example: → RequestDispatcher dispatcher = request.getRequestDispatcher("JSPprofile.jsp");
                  → dispatcher.forward(request, response);
 
-      * Difference between sendRedirect() and RequestDispatcher :-
+# Difference between sendRedirect() and RequestDispatcher :-
             * sendRedirect()
                   → It is used for external request redirection.
                   → It redirects the request to a different application or URL.
