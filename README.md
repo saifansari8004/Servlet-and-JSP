@@ -146,7 +146,7 @@ Servlet and JSP Tutorial
                      →  addHeader(String name, String value): Adds a response header with the given name and value.
                      
 # Http Methods :
-   Some commonly used HTTP methods are:-
+      * Some commonly used HTTP methods are:-
       * GET:- The GET method is used to retrieve information from the given server using a given URL. Requests using GET should only retrieve data and should have no other effect on the data.
       * HEAD :- Same as GET, but transfers the status line and header section only.
       * POST:- A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms.
