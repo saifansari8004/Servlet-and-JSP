@@ -153,29 +153,29 @@ Servlet and JSP Tutorial
       * PUT :- Replaces all current representations of the target resource with the uploaded content.
       * DELETE :- Removes all current representations of the target resource given by a URL.
       	
-  * GET: 
-            →  GET method sends data through the resource URL and thus it is not secured.
-            →  GET is slightly faster because the values are sent in the header.
-            →  We can send very less data in case of GET request because it adds the data to the URL and the length of a URL is limited (maximum URL length is 2048 characters)
-            →  for GET type request --> use doGet() method
-  * POST:
-            →  POST method sends data through the HTTP message body and thus it is more secure.
-            →  POST is slightly slow because the values are sent in the request body, in the format that the content type specifies.
-            →  We can send a huge amount of data in case of POST request, there is no restriction.
-            →  for POST type request --> use doPost() method.
-      
-  * Difference between GET and POST :-
-      * GET
-                  →  GET method sends data through the resource URL
-                  →  GET is not secured as data is visible in URL
-                  →  We can send very less data using GET request because data is transferred using URL
-                  →  GET request can be cached
-                  →  GET request can be bookmarked
-
-      * POST
-                  →  POST method sends data through the HTTP message body
-                  →  POST is more secured as data is not visible in URL
-                  →  We can send more data using POST because it does not send data using URL
-                  →  POST request cannot be cached
-                  →  POST method cannot be bookmarked
+     * GET: 
+               →  GET method sends data through the resource URL and thus it is not secured.
+               →  GET is slightly faster because the values are sent in the header.
+               →  We can send very less data in case of GET request because it adds the data to the URL and the length of a URL is limited (maximum URL length is 2048 characters)
+               →  for GET type request --> use doGet() method
+     * POST:
+               →  POST method sends data through the HTTP message body and thus it is more secure.
+               →  POST is slightly slow because the values are sent in the request body, in the format that the content type specifies.
+               →  We can send a huge amount of data in case of POST request, there is no restriction.
+               →  for POST type request --> use doPost() method.
+         
+     * Difference between GET and POST :-
+         * GET
+                     →  GET method sends data through the resource URL
+                     →  GET is not secured as data is visible in URL
+                     →  We can send very less data using GET request because data is transferred using URL
+                     →  GET request can be cached
+                     →  GET request can be bookmarked
+   
+         * POST
+                     →  POST method sends data through the HTTP message body
+                     →  POST is more secured as data is not visible in URL
+                     →  We can send more data using POST because it does not send data using URL
+                     →  POST request cannot be cached
+                     →  POST method cannot be bookmarked
 
