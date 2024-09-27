@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f0f4f8;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Form container styling */
+.form-container {
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 350px;
+}
+
+.form-container h2 {
+	text-align: center;
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+.form-container label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #555555;
+}
+
+.form-container input[type="email"], .form-container input[type="password"]
+	{
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.form-container input[type="submit"], .form-container input[type="reset"]
+	{
+	width: 100%;
+	padding: 12px;
+	background-color: #00796b;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.form-container input[type="reset"] {
+	background-color: #d32f2f;
+}
+
+.form-container input[type="submit"]:hover {
+	background-color: #004d40;
+}
+
+.form-container input[type="reset"]:hover {
+	background-color: #b71c1c;
+}
+</style>
+</head>
+<body>
+
+	<div class="form-container">
+		<h2>Login</h2>
+		<form action="profile" method="get">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+			<input type="submit" value="Login">
+			<input type="reset" value="Reset">
+		</form>
+	</div>
+
+</body>
+</html>
