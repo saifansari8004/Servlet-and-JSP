@@ -119,4 +119,63 @@ Servlet and JSP Tutorial
       * Note: Annotations i.e. @WebServlet, @WebFilter, @WebListener, @MultipartConfig etc are part of the Java Servlet API and can be used in any version from servlet 3.0 onwards, including newer versions like 3.1, 4.0, and 5.0
 
 
+# Introduction to HttpServletRequest and HttpServletResponse:
+      * Both are interfaces.
+      * HttpServletRequest:
+            - Represents the client's request, containing data like parameters, headers, and method types.
+            - Methods : 
+                     →  getParameter(String name): Returns the value of the request parameter specified by the name.
+                     →  getCookies(): Returns an array of Cookie objects representing the cookies included in the request.
+                     →  getSession(boolean create): Returns the current session associated with the request or creates a new one if create is true.
+                     →  getMethod(): Returns the HTTP method of the request, such as GET, POST, PUT, DELETE, etc.
+                     →  getAttribute(String name): Returns the value of the named attribute as an Object.
+                     →  setAttribute(String name, Object value): Binds an object to a given attribute name in the request scope.
+                     →  getHeader(String name): Returns the value of the specified HTTP header.
+                     →  getHeaderNames(): Returns an enumeration of all the header names sent with the request.
+      * HttpServletResponse:
+            - Represents the client's request, containing data like parameters, headers, and method types.
+            - Methods :
+                     →  getWriter(): Returns a PrintWriter object that can be used to send character text to the client.
+                     →  setContentType(String type): Sets the MIME type of the response.
+                     →  setContentLength (int len): Sets the length of the content being returned in the response.
+                     →  sendRedirect(String location): Redirects the client to a different URL. 
+                     →  sendError(int sc, String msg): Sends an error response to the client with the specified status code and message. 
+                     →  addCookie(Cookie cookie): Adds a cookie to the response.
+                     →  setStatus(int sc): Sets the status code of the response.
+                     →  setHeader(String name, String value): Sets the value of the specified response header.
+                     →  addHeader(String name, String value): Adds a response header with the given name and value.
+                     
+# Http Methods :
+   Some commonly used HTTP methods are:-
+      * GET:- The GET method is used to retrieve information from the given server using a given URL. Requests using GET should only retrieve data and should have no other effect on the data.
+      * HEAD :- Same as GET, but transfers the status line and header section only.
+      * POST:- A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms.
+      * PUT :- Replaces all current representations of the target resource with the uploaded content.
+      * DELETE :- Removes all current representations of the target resource given by a URL.
+      	
+  * GET: 
+            →  GET method sends data through the resource URL and thus it is not secured.
+            →  GET is slightly faster because the values are sent in the header.
+            →  We can send very less data in case of GET request because it adds the data to the URL and the length of a URL is limited (maximum URL length is 2048 characters)
+            →  for GET type request --> use doGet() method
+  * POST:
+            →  POST method sends data through the HTTP message body and thus it is more secure.
+            →  POST is slightly slow because the values are sent in the request body, in the format that the content type specifies.
+            →  We can send a huge amount of data in case of POST request, there is no restriction.
+            →  for POST type request --> use doPost() method.
+      
+  * Difference between GET and POST :-
+      * GET
+                  →  GET method sends data through the resource URL
+                  →  GET is not secured as data is visible in URL
+                  →  We can send very less data using GET request because data is transferred using URL
+                  →  GET request can be cached
+                  →  GET request can be bookmarked
+
+      * POST
+                  →  POST method sends data through the HTTP message body
+                  →  POST is more secured as data is not visible in URL
+                  →  We can send more data using POST because it does not send data using URL
+                  →  POST request cannot be cached
+                  →  POST method cannot be bookmarked
 
