@@ -204,7 +204,7 @@
                   → It forwards or includes the request to the same application or URL.
                   → It has 2 methods, forward() and include().
                   → Syntax :-
-                        → forward() method:
+                        → forward() method: 
                               → rd.forward(request, response);
                         → include() method:
                               → rd.include(request, response);
